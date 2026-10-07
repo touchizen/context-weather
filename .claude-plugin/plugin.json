@@ -1,0 +1,12 @@
+{
+  "name": "context-weather",
+  "version": "0.1.0",
+  "description": "Shows context usage above the prompt as a weather icon and percent; storm from 70%.",
+  "author": {
+    "name": "touchizen",
+    "url": "https://github.com/touchizen"
+  },
+  "homepage": "https://github.com/touchizen/context-weather",
+  "repository": "https://github.com/touchizen/context-weather",
+  "license": "MIT"
+}
