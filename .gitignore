@@ -1,5 +1,6 @@
 node_modules/
 .claude-plugin/types/
+**/.claude-plugin/types/
 .DS_Store
 *.log
 .env*

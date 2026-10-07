@@ -51,6 +51,7 @@ claude --plugin-dir .
 | 기능 | 원본 소스 |
 | --- | --- |
 | 영상에서 만든 컨텍스트 날씨 | [touchizen/context-weather](https://github.com/touchizen/context-weather) |
+| 훅에서 실행한 팀 규칙 예시 | [examples/team-rules](https://github.com/touchizen/context-weather/tree/main/examples/team-rules) |
 | 삭제 전 파일 확인 · Blast Radius | [Anthropic 공식 샘플](https://github.com/anthropics/claude-code-playground/tree/main/claude-code/mods/blast-radius) |
 | 공식 Token Weather 예시 | [Anthropic 공식 샘플](https://github.com/anthropics/claude-code-playground/tree/main/claude-code/mods/token-weather) |
 | 답변을 부드럽게 · smooth-stream | [KyongSik-Yoon/claude-mods](https://github.com/KyongSik-Yoon/claude-mods) |
@@ -58,7 +59,18 @@ claude --plugin-dir .
 
 Blast Radius 샘플은 Bash 도구 호출을 감시해. Windows에서 같은 삭제 확인 예시를 따라 하려면 [Git for Windows](https://git-scm.com/downloads/win)를 설치해 Bash 도구를 사용할 수 있게 해야 해. PowerShell 도구의 삭제 호출까지 보호한다고 가정하면 안 돼. 컨텍스트 날씨 자체에는 Git/Bash 설치가 필요하지 않아.
 
-다른 제작자의 코드는 각 원본 저장소에서 확인해. 이 저장소에는 영상에서 만든 컨텍스트 날씨 소스만 포함돼.
+다른 제작자의 코드는 각 원본 저장소에서 확인해. 이 저장소에는 영상에서 만든 컨텍스트 날씨와 직접 실행한 팀 규칙 예시 소스가 들어 있어.
+
+## 팀 규칙 예시도 켜 보고 싶다면
+
+다운로드한 `context-weather-main` 폴더에서 아래 명령을 한 줄씩 실행해. 자세한 설명은 [팀 규칙 README](examples/team-rules/README.md)에 있어.
+
+```sh
+claude plugin validate ./examples/team-rules
+claude --plugin-dir ./examples/team-rules
+```
+
+요청에 ‘계획 먼저 → 승인 후 수정 → 관련 검사’라는 규칙을 추가하고 입력창 위에 활성화 표시를 그려 줘. 규칙은 Claude가 읽는 추가 문맥이고 강제 권한 차단은 아니야. 이 예시는 Claude Code 2.1.292의 실제 macOS 세션에서 규칙 주입 로그까지 확인했어. 촬영 계정의 주간 한도로 이후 모델 답변과 파일 수정은 시연하지 않았어.
 
 ## 접근 범위
 
